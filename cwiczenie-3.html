@@ -15,14 +15,51 @@
 
 	<input type="submit" value="Sprawdź ćwiartkę" onclick="ktora_cwiartka()">
 
-	<div id="wynik"></div>
+	<p id="wynik"></p>
 	
 	<script>
 	
 		function ktora_cwiartka()
 		{
 			
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+			var wynik = document.getElementById("wynik").value;
 			
+			if(x == 0 && y == 0){
+
+				wynik.innerHTML = "Punkt P=(0,0) jest początkiem układu współrzędnych";
+
+			}else if(x == 0 || y == 0){
+
+				wynik.innerHTML = " Punkt leży na jednej z osi układu";
+
+			}else if(x == 15 && y == 96){
+
+				wynik.innerHTML = "Kartezjusz, a właściwie René Descartes, przyszedł na świat w La Haye Touraine 31 marca 1596 roku. Miał szlacheckie pochodzenie. Odebrał gruntowne wykształcenie. Studiował m.in. w Paryżu oraz ukończył prawo na uniwersytecie w Poitiers. Zajmował się szeroko pojętą nauką. Lecz nie tylko, bowiem zasilił również szeregi wojskowe, dzięki czemu zdobył gruntowne doświadczenie podróżując po całej Europie. Pracował następnie we Francji, by trafić w końcu do Holandii, gdzie podjął profesję na Uniwersytecie we Franeker. W roku 1649 uczony zdecydował się jednak wyjechać do Szwecji, gdzie udzielał na przykład prywatnych korepetycji samej królowej Krystynie. Interesował się szczególnie filozofią, prawem, medycyną, matematyką i fizyką, także optyką. Był racjonalistą. Uważał, że poznanie świata winno być rozumowe, dlatego też uczynił matematykę osią swych rozważań. To właśnie jego autorstwa jest słynna maksyma „Cogito ergo sum” („Myślę, więc jestem”). Uczony zasłynął i wiele wniósł do dziedziny szeroko pojętej matematyki. Pośród jego dokonań wymienić należy przykładowo geometrię analityczną, w tym rachunek różniczkowy, również funkcje, czy też w końcu zagadnienie liczb urojonych oraz twierdzenie Bèzout. Zajmował się w tym obszarze m.in. szacowaniem wartości pierwiastków dodatnich i ujemnych. Był osobą bardzo wszechstronną i niezwykle kreatywną. Ze swych obserwacji świata wysnuwał wnioski i bardzo interesujące tezy.";
+			
+			}else if(x > 0 && y > 0){
+
+				wynik.innerHTML = " Punkt leży na I ćwiartce";
+
+			}else if(x < 0 && y > 0){
+
+				wynik.innerHTML = " Punkt leży na II ćwiartce";
+
+			}else if(x > 0 && y < 0){
+
+				wynik.innerHTML = " Punkt leży na III ćwiartce";
+
+			}else if(x < 0 && y < 0){
+
+				wynik.innerHTML = " Punkt leży na IV ćwiartce";
+
+			}else{
+
+				wynik.innerHTML = " Błąd";
+
+			}
+
 		}
 
 	</script>
