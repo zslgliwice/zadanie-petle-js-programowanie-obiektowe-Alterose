@@ -17,7 +17,20 @@
 
 	<input type="submit" value="Informacje o liczbach" onclick="matematyka()">
 
-	<div id="wynik"></div>
+	<div id="wynik">
+
+		<p id="wynik1"></p>
+		<p id="wynik2"></p>
+
+		<p id="wynik3a"></p>
+		<p id="wynik3b"></p>
+		<p id="wynik3c"></p>
+
+		<p id="wynik4a"></p>
+		<p id="wynik4b"></p>
+		<p id="wynik4c"></p>
+
+	</div>
 	
 	<script>
 	
@@ -26,8 +39,126 @@
 			var a = document.getElementById('a').value;
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
+
+			var wynik1 = document.getElementById("wynik1");
+			var wynik2 = document.getElementById("wynik2");
+
+			var wynik3a = document.getElementById("wynik3a");
+			var wynik3b = document.getElementById("wynik3b");
+			var wynik3c = document.getElementById("wynik3c");
+
+			var wynik4a = document.getElementById("wynik4a");
+			var wynik4b = document.getElementById("wynik4b");
+			var wynik4c = document.getElementById("wynik4c");
+
+			//Podpunkt A
+
+			if(a < b && a < c){
+
+				wynik1.innerHTML = "Liczba "+a+" jest najmniejszą wprowadzoną liczbą.<br>";
+
+			}else if(b < a && b < c){
+
+				wynik1.innerHTML = "Liczba "+b+" jest najmniejszą wprowadzoną liczbą.<br>";
+
+			}else if(c < a && c < b){
+
+				wynik1.innerHTML = "Liczba "+c+" jest najmniejszą wprowadzoną liczbą.<br>";
+
+			}else{
+
+				wynik1.innerHTML = "Nie ma najmniejszej wprowadzonej liczby.<br>";
+
+			}
 			
+			//Podpunkt B
+
+			if(a > b && a > c){
+
+				wynik2.innerHTML = "Liczba "+a+" jest największą wprowadzoną liczbą.<br>";
+
+			}else if(b > a && b > c){
+
+				wynik2.innerHTML = "Liczba "+b+" jest największą wprowadzoną liczbą.<br>";
+
+			}else if(c > a && c > b){
+
+				wynik2.innerHTML = "Liczba "+c+" jest największą wprowadzoną liczbą.<br>";
+
+			}else{
+
+				wynik2.innerHTML = "Nie ma największej wprowadzonej liczby.<br>";
+
+			}
 			
+			//Podpunkt C
+
+			if(a < 0){
+
+				math.abs(a);
+				wynik3a.innerHTML = "Wartość bezwzględna z a wynosi: "+a+"<br>";
+
+			}else{
+
+				wynik3a.innerHTML = "Wartość bezwzględna z a wynosi: "+a+"<br>";
+
+			}
+
+			if(b < 0){
+
+				math.abs(b);
+				wynik3b.innerHTML = "Wartość bezwzględna z a wynosi: "+b+"<br>";
+
+			}else{
+
+				wynik3b.innerHTML = "Wartość bezwzględna z a wynosi: "+b+"<br>";
+
+			}
+
+			if(c < 0){
+
+				math.abs(c);
+				wynik3c.innerHTML = "Wartość bezwzględna z a wynosi: "+c+"<br>";
+
+			}else{
+
+				wynik3c.innerHTML = "Wartość bezwzględna z a wynosi: "+c+"<br>";
+
+			}
+
+			//Podpunkt D
+
+			if(a % 2 == 0){
+
+				wynik4a.innerHTML = "Liczba a: "+a+" jest parzysta<br>";
+
+			}else{
+
+				wynik4a.innerHTML = "Liczba a: "+a+" jest nieparzysta<br>";
+
+			}
+
+			if(b % 2 == 0){
+
+				wynik4b.innerHTML = "Liczba b: "+b+" jest parzysta<br>";
+
+			}else{
+
+				wynik4b.innerHTML = "Liczba b: "+b+" jest nieparzysta<br>";
+
+			}
+
+			
+			if(c % 2 == 0){
+
+				wynik4c.innerHTML = "Liczba c: "+c+" jest parzysta<br>";
+
+			}else{
+
+				wynik4c.innerHTML = "Liczba c: "+c+" jest nieparzysta<br>";
+
+			}
+
 		}
 
 	</script>
