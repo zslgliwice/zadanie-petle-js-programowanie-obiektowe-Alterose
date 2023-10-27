@@ -15,14 +15,45 @@
 
 	<input type="submit" value="Wybieram bramkę" onclick="teleturniej()">
 
-	<div id="wynik"></div>
+	<p id="wynik"></p>
 	
 	<script>
 	
 		function teleturniej()
 		{
 			var lucky = Math.floor(Math.random() * 3) + 1;
+			var bramka = document.getElementById("wynik").value;
+			var wynik = document.getElementById("wynik");
+
+			//Próba:
+			//bramka < 0 && bramka > 3 ? wynik.innerHTML = "Wprowadzono nie poprawne dane." : bramka == lucky ? wynik.innerHTML =  "Hurra! W bramce nr "+lucky+" jest samochód!" : wynik.innerHTML ="Niestety! Samochód znajdował się w bramce nr "+lucky+"..." ;
 			
+			//Rozwiązanie bez sprawdzania błędów typu wpisanych z poza zakresu działania programu
+			bramka == lucky ? wynik.innerHTML =  "Hurra! W bramce nr "+lucky+" jest samochód!" : wynik.innerHTML ="Niestety! Samochód znajdował się w bramce nr "+lucky+"...";
+			
+			//Rozwiązanie ze sprawdzaniem błędów, lecz z wykorzystaniem standardowego zapisu funkcji if()
+			
+			/*
+			
+			if(bramka < 0 && bramka > 3){
+
+				wynik.innerHTML = "Wprowadzono nie poprawne dane.";
+
+			}else{
+
+				if(bramka == lucky){
+
+					wynik.innerHTML =  "Hurra! W bramce nr "+lucky+" jest samochód!";
+
+				}else{
+
+					wynik.innerHTML ="Niestety! Samochód znajdował się w bramce nr "+lucky+"...";
+
+				}
+
+			}
+			
+			*/
 		}
 
 	</script>
